@@ -1,1 +1,1 @@
-Projeto para trabalho final da disciplina de Programação Orientada á Objetos com C# e Windows Form
+Projeto para o trabalho final da disciplina de Programação Orientada á Objetos com C# e Windows Form
