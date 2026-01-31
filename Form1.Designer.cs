@@ -32,15 +32,9 @@
             menuStrip1 = new MenuStrip();
             usuáriosToolStripMenuItem = new ToolStripMenuItem();
             adicionarToolStripMenuItem = new ToolStripMenuItem();
-            removerToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripSeparator();
-            sairToolStripMenuItem = new ToolStripMenuItem();
             treinosToolStripMenuItem = new ToolStripMenuItem();
-            adicionarToolStripMenuItem1 = new ToolStripMenuItem();
-            removerToolStripMenuItem1 = new ToolStripMenuItem();
-            exibirTToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripSeparator();
-            sairToolStripMenuItem1 = new ToolStripMenuItem();
+            verTreinosToolStripMenuItem = new ToolStripMenuItem();
+            sairToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,7 +42,7 @@
             // 
             menuStrip1.BackgroundImageLayout = ImageLayout.Center;
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { usuáriosToolStripMenuItem, treinosToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { usuáriosToolStripMenuItem, treinosToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(927, 28);
@@ -57,71 +51,39 @@
             // 
             // usuáriosToolStripMenuItem
             // 
-            usuáriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { adicionarToolStripMenuItem, removerToolStripMenuItem, toolStripMenuItem1, sairToolStripMenuItem });
+            usuáriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { adicionarToolStripMenuItem });
             usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            usuáriosToolStripMenuItem.Size = new Size(79, 24);
-            usuáriosToolStripMenuItem.Text = "Usuários";
+            usuáriosToolStripMenuItem.Size = new Size(106, 24);
+            usuáriosToolStripMenuItem.Text = "Gerir Treinos";
             usuáriosToolStripMenuItem.Click += usuáriosToolStripMenuItem_Click;
             // 
             // adicionarToolStripMenuItem
             // 
             adicionarToolStripMenuItem.Name = "adicionarToolStripMenuItem";
-            adicionarToolStripMenuItem.Size = new Size(224, 26);
-            adicionarToolStripMenuItem.Text = "Adicionar";
+            adicionarToolStripMenuItem.Size = new Size(263, 26);
+            adicionarToolStripMenuItem.Text = "&Cadastrar/Remover treino";
+            adicionarToolStripMenuItem.Click += adicionarToolStripMenuItem_Click;
             // 
-            // removerToolStripMenuItem
+            // treinosToolStripMenuItem
             // 
-            removerToolStripMenuItem.Name = "removerToolStripMenuItem";
-            removerToolStripMenuItem.Size = new Size(224, 26);
-            removerToolStripMenuItem.Text = "Remover";
+            treinosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { verTreinosToolStripMenuItem });
+            treinosToolStripMenuItem.Name = "treinosToolStripMenuItem";
+            treinosToolStripMenuItem.Size = new Size(128, 24);
+            treinosToolStripMenuItem.Text = "&Verificar Treinos";
             // 
-            // toolStripMenuItem1
+            // verTreinosToolStripMenuItem
             // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(221, 6);
+            verTreinosToolStripMenuItem.Name = "verTreinosToolStripMenuItem";
+            verTreinosToolStripMenuItem.Size = new Size(164, 26);
+            verTreinosToolStripMenuItem.Text = "&Ver Treinos";
+            verTreinosToolStripMenuItem.Click += verTreinosToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(224, 26);
-            sairToolStripMenuItem.Text = "Sair";
-            // 
-            // treinosToolStripMenuItem
-            // 
-            treinosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { adicionarToolStripMenuItem1, removerToolStripMenuItem1, exibirTToolStripMenuItem, toolStripMenuItem2, sairToolStripMenuItem1 });
-            treinosToolStripMenuItem.Name = "treinosToolStripMenuItem";
-            treinosToolStripMenuItem.Size = new Size(64, 24);
-            treinosToolStripMenuItem.Text = "Treino";
-            // 
-            // adicionarToolStripMenuItem1
-            // 
-            adicionarToolStripMenuItem1.Name = "adicionarToolStripMenuItem1";
-            adicionarToolStripMenuItem1.Size = new Size(224, 26);
-            adicionarToolStripMenuItem1.Text = "Adicionar";
-            // 
-            // removerToolStripMenuItem1
-            // 
-            removerToolStripMenuItem1.Name = "removerToolStripMenuItem1";
-            removerToolStripMenuItem1.Size = new Size(224, 26);
-            removerToolStripMenuItem1.Text = "Remover";
-            // 
-            // exibirTToolStripMenuItem
-            // 
-            exibirTToolStripMenuItem.Name = "exibirTToolStripMenuItem";
-            exibirTToolStripMenuItem.Size = new Size(224, 26);
-            exibirTToolStripMenuItem.Text = "Editar treinos";
-            exibirTToolStripMenuItem.Click += exibirTToolStripMenuItem_Click;
-            // 
-            // toolStripMenuItem2
-            // 
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(221, 6);
-            // 
-            // sairToolStripMenuItem1
-            // 
-            sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
-            sairToolStripMenuItem1.Size = new Size(224, 26);
-            sairToolStripMenuItem1.Text = "Sair";
+            sairToolStripMenuItem.Size = new Size(48, 24);
+            sairToolStripMenuItem.Text = "&Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // nome_do_app
             // 
@@ -144,14 +106,8 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem usuáriosToolStripMenuItem;
         private ToolStripMenuItem adicionarToolStripMenuItem;
-        private ToolStripMenuItem removerToolStripMenuItem;
-        private ToolStripSeparator toolStripMenuItem1;
-        private ToolStripMenuItem sairToolStripMenuItem;
         private ToolStripMenuItem treinosToolStripMenuItem;
-        private ToolStripMenuItem adicionarToolStripMenuItem1;
-        private ToolStripMenuItem removerToolStripMenuItem1;
-        private ToolStripMenuItem exibirTToolStripMenuItem;
-        private ToolStripSeparator toolStripMenuItem2;
-        private ToolStripMenuItem sairToolStripMenuItem1;
+        private ToolStripMenuItem verTreinosToolStripMenuItem;
+        private ToolStripMenuItem sairToolStripMenuItem;
     }
 }
