@@ -66,7 +66,7 @@
             // 
             // textBoxNomeAluno
             // 
-            textBoxNomeAluno.BackColor = Color.Blue;
+            textBoxNomeAluno.BackColor = Color.Black;
             textBoxNomeAluno.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBoxNomeAluno.ForeColor = Color.White;
             textBoxNomeAluno.Location = new Point(382, 74);
@@ -76,7 +76,7 @@
             // 
             // textBoxNomeTreino
             // 
-            textBoxNomeTreino.BackColor = Color.Yellow;
+            textBoxNomeTreino.BackColor = Color.Black;
             textBoxNomeTreino.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBoxNomeTreino.ForeColor = Color.White;
             textBoxNomeTreino.Location = new Point(377, 145);

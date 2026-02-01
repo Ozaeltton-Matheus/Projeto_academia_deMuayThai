@@ -9,8 +9,8 @@ namespace Projeto_academia_deMuayThai
 {
     internal class Aluno
     {
-        public String Nome { get; set; }
-        public String Treino { get; set; }
+        public String ?Nome { get; set; }
+        public String ?Treino { get; set; }
 
         public String JsonSerializar(Aluno aluno)
         {
@@ -18,7 +18,9 @@ namespace Projeto_academia_deMuayThai
             // Esse método recebe um objeto Aluno, serializa e devolve uma String Json pra quem chamar o método JsonSerializar
         }
 
-        public static  JsonDeserializar(String Json)
+
+        // Tava dando erro de que era necessário ter um retorno e eu adicionei o void
+        public static Object  JsonDeserializar(String Json)
         {
             return JsonConvert.DeserializeObject<Aluno>(Json);
         }
