@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Projeto_academia_deMuayThai
 {
@@ -35,7 +36,21 @@ namespace Projeto_academia_deMuayThai
             // Aqui estou pegando o conteúdo digitado nas caixas de texto onde ficam o nome do aluno e o treino
             // E estou atribuindo ás propriedades do objeto aluno
 
-            MessageBox.Show(aluno.JsonSerializar(aluno));
+
+            // MessageBox.Show(aluno.JsonSerializar(aluno));
+
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(@"C:\Users\Windows Falido\Documents\dados_da_academia_de_muaythai\arquivo.json"))
+                {
+                    sw.WriteLine(aluno.JsonSerializar(aluno));
+                }
+                MessageBox.Show("Arquivo salvo com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha: " + ex.Message);
+            }
         }
     }
 }
