@@ -26,5 +26,16 @@ namespace Projeto_academia_deMuayThai
         {
 
         }
+
+        private void btnCadastrarTreino_Click(object sender, EventArgs e)
+        {
+            var aluno = new Aluno();
+            aluno.Nome = textBoxNomeAluno.Text;
+            aluno.Treino = textBoxNomeTreino.Text;
+            // Aqui estou pegando o conteúdo digitado nas caixas de texto onde ficam o nome do aluno e o treino
+            // E estou atribuindo ás propriedades do objeto aluno
+
+            MessageBox.Show(aluno.JsonSerializar(aluno));
+        }
     }
 }

@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             labelNome = new Label();
             labelTreino = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxNomeAluno = new TextBox();
+            textBoxNomeTreino = new TextBox();
             btnCadastrarTreino = new Button();
             btnRemoverTreino = new Button();
             SuspendLayout();
@@ -64,21 +64,25 @@
             labelTreino.Text = "Nome do Treino: ";
             labelTreino.Click += label2_Click;
             // 
-            // textBox1
+            // textBoxNomeAluno
             // 
-            textBox1.BackColor = Color.Blue;
-            textBox1.Location = new Point(382, 74);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(170, 27);
-            textBox1.TabIndex = 2;
+            textBoxNomeAluno.BackColor = Color.Blue;
+            textBoxNomeAluno.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBoxNomeAluno.ForeColor = Color.White;
+            textBoxNomeAluno.Location = new Point(382, 74);
+            textBoxNomeAluno.Name = "textBoxNomeAluno";
+            textBoxNomeAluno.Size = new Size(170, 34);
+            textBoxNomeAluno.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxNomeTreino
             // 
-            textBox2.BackColor = Color.Yellow;
-            textBox2.Location = new Point(377, 145);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(175, 27);
-            textBox2.TabIndex = 3;
+            textBoxNomeTreino.BackColor = Color.Yellow;
+            textBoxNomeTreino.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBoxNomeTreino.ForeColor = Color.White;
+            textBoxNomeTreino.Location = new Point(377, 145);
+            textBoxNomeTreino.Name = "textBoxNomeTreino";
+            textBoxNomeTreino.Size = new Size(175, 34);
+            textBoxNomeTreino.TabIndex = 3;
             // 
             // btnCadastrarTreino
             // 
@@ -92,6 +96,7 @@
             btnCadastrarTreino.Text = "Cadastrar";
             btnCadastrarTreino.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnCadastrarTreino.UseVisualStyleBackColor = false;
+            btnCadastrarTreino.Click += btnCadastrarTreino_Click;
             // 
             // btnRemoverTreino
             // 
@@ -114,8 +119,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnRemoverTreino);
             Controls.Add(btnCadastrarTreino);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxNomeTreino);
+            Controls.Add(textBoxNomeAluno);
             Controls.Add(labelTreino);
             Controls.Add(labelNome);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -129,8 +134,8 @@
 
         private Label labelNome;
         private Label labelTreino;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBoxNomeAluno;
+        private TextBox textBoxNomeTreino;
         private Button btnCadastrarTreino;
         private Button btnRemoverTreino;
     }

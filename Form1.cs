@@ -54,5 +54,10 @@ namespace Projeto_academia_deMuayThai
             Form3 form3 = new Form3();
             form3.ShowDialog();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

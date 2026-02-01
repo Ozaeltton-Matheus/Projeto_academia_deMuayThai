@@ -40,6 +40,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.Blue;
             menuStrip1.BackgroundImageLayout = ImageLayout.Center;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { usuáriosToolStripMenuItem, treinosToolStripMenuItem, sairToolStripMenuItem });
@@ -48,10 +49,13 @@
             menuStrip1.Size = new Size(927, 28);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // usuáriosToolStripMenuItem
             // 
+            usuáriosToolStripMenuItem.BackColor = Color.Blue;
             usuáriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { adicionarToolStripMenuItem });
+            usuáriosToolStripMenuItem.ForeColor = Color.White;
             usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
             usuáriosToolStripMenuItem.Size = new Size(106, 24);
             usuáriosToolStripMenuItem.Text = "Gerir Treinos";
@@ -59,6 +63,8 @@
             // 
             // adicionarToolStripMenuItem
             // 
+            adicionarToolStripMenuItem.BackColor = Color.Blue;
+            adicionarToolStripMenuItem.ForeColor = Color.White;
             adicionarToolStripMenuItem.Name = "adicionarToolStripMenuItem";
             adicionarToolStripMenuItem.Size = new Size(263, 26);
             adicionarToolStripMenuItem.Text = "&Cadastrar/Remover treino";
@@ -66,20 +72,26 @@
             // 
             // treinosToolStripMenuItem
             // 
+            treinosToolStripMenuItem.BackColor = Color.Blue;
             treinosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { verTreinosToolStripMenuItem });
+            treinosToolStripMenuItem.ForeColor = Color.White;
             treinosToolStripMenuItem.Name = "treinosToolStripMenuItem";
             treinosToolStripMenuItem.Size = new Size(128, 24);
             treinosToolStripMenuItem.Text = "&Verificar Treinos";
             // 
             // verTreinosToolStripMenuItem
             // 
+            verTreinosToolStripMenuItem.BackColor = Color.Blue;
+            verTreinosToolStripMenuItem.ForeColor = Color.White;
             verTreinosToolStripMenuItem.Name = "verTreinosToolStripMenuItem";
-            verTreinosToolStripMenuItem.Size = new Size(164, 26);
+            verTreinosToolStripMenuItem.Size = new Size(224, 26);
             verTreinosToolStripMenuItem.Text = "&Ver Treinos";
             verTreinosToolStripMenuItem.Click += verTreinosToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
+            sairToolStripMenuItem.BackColor = Color.Blue;
+            sairToolStripMenuItem.ForeColor = Color.White;
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(48, 24);
             sairToolStripMenuItem.Text = "&Sair";
@@ -89,7 +101,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.MenuHighlight;
+            BackColor = Color.Blue;
             BackgroundImage = Properties.Resources.Fundo;
             ClientSize = new Size(927, 549);
             Controls.Add(menuStrip1);
