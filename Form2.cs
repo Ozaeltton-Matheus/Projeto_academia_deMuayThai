@@ -39,6 +39,8 @@ namespace Projeto_academia_deMuayThai
 
             // MessageBox.Show(aluno.JsonSerializar(aluno));
 
+            // Serializando no arquivo.json lá na pasta documentos
+
             try
             {
                 using (StreamWriter sw = new StreamWriter(@"C:\Users\Windows Falido\Documents\dados_da_academia_de_muaythai\arquivo.json"))
@@ -50,6 +52,32 @@ namespace Projeto_academia_deMuayThai
             catch (Exception ex)
             {
                 MessageBox.Show("Falha: " + ex.Message);
+            }
+        }
+
+        private void btnRemoverTreino_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                var strJson = "";
+                using (StreamReader sr = new StreamReader(@"C:\Users\Windows Falido\Documents\dados_da_academia_de_muaythai\arquivo.json"))
+                    {
+                    strJson = sr.ReadToEnd();
+                    }
+                // Aqui o método está desserializando a string que ele leu.
+                var aluno = Aluno.JsonDesserializar(strJson);
+
+                textBoxNomeAluno.Text = aluno.Nome;
+                textBoxNomeTreino.Text = aluno.Treino;
+                // DEvolve o objeto Aluno tem essas propriedades que são da classe aluno
+                // Está pegando as propriedades e atribuindo ao textBox
+                // O método vai preencher o formulário com os dados do arquivo.json
+            }
+
+            catch (Exception ex)
+            {
+
             }
         }
     }

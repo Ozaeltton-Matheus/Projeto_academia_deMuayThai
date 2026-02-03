@@ -109,6 +109,7 @@
             btnRemoverTreino.TabIndex = 5;
             btnRemoverTreino.Text = "Remover";
             btnRemoverTreino.UseVisualStyleBackColor = false;
+            btnRemoverTreino.Click += btnRemoverTreino_Click;
             // 
             // Form2
             // 

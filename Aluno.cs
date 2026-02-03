@@ -19,8 +19,8 @@ namespace Projeto_academia_deMuayThai
         }
 
 
-        // Tava dando erro de que era necessário ter um retorno e eu adicionei o void
-        public static Object  JsonDeserializar(String Json)
+        
+        public static Aluno JsonDesserializar(String Json)
         {
             return JsonConvert.DeserializeObject<Aluno>(Json);
         }
