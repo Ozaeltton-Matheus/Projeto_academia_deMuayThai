@@ -83,6 +83,16 @@ namespace Projeto_academia_deMuayThai.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fundo_Form3 {
+            get {
+                object obj = ResourceManager.GetObject("Fundo_Form3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Luta_intensa_no_ringue_de_Muay_Thai {
             get {
                 object obj = ResourceManager.GetObject("Luta intensa no ringue de Muay Thai", resourceCulture);
