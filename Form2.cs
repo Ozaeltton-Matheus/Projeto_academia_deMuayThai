@@ -48,6 +48,7 @@ namespace Projeto_academia_deMuayThai
                     sw.WriteLine(aluno.JsonSerializar(aluno));
                 }
                 MessageBox.Show("Arquivo salvo com sucesso!");
+                // Depois de salvar o arquivo, o .Clear limpa os campos do formulário
                 textBoxNomeAluno.Clear();
                 textBoxNomeTreino.Clear();
             }

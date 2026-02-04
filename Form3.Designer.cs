@@ -32,6 +32,7 @@
             btnPesquisarAluno = new Button();
             textBoxPesquisarAluno = new TextBox();
             dataGridView1 = new DataGridView();
+            btnRemoverAluno = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             textBoxPesquisarAluno.ForeColor = Color.White;
             textBoxPesquisarAluno.Location = new Point(14, 25);
             textBoxPesquisarAluno.Name = "textBoxPesquisarAluno";
-            textBoxPesquisarAluno.Size = new Size(638, 34);
+            textBoxPesquisarAluno.Size = new Size(503, 34);
             textBoxPesquisarAluno.TabIndex = 2;
             // 
             // dataGridView1
@@ -69,6 +70,18 @@
             dataGridView1.Size = new Size(763, 356);
             dataGridView1.TabIndex = 3;
             // 
+            // btnRemoverAluno
+            // 
+            btnRemoverAluno.BackColor = Color.Red;
+            btnRemoverAluno.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRemoverAluno.ForeColor = Color.White;
+            btnRemoverAluno.Location = new Point(533, 22);
+            btnRemoverAluno.Name = "btnRemoverAluno";
+            btnRemoverAluno.Size = new Size(119, 40);
+            btnRemoverAluno.TabIndex = 4;
+            btnRemoverAluno.Text = "Remover";
+            btnRemoverAluno.UseVisualStyleBackColor = false;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -76,6 +89,7 @@
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.Fundo_Form3;
             ClientSize = new Size(789, 450);
+            Controls.Add(btnRemoverAluno);
             Controls.Add(dataGridView1);
             Controls.Add(textBoxPesquisarAluno);
             Controls.Add(btnPesquisarAluno);
@@ -91,5 +105,6 @@
         private Button btnPesquisarAluno;
         private TextBox textBoxPesquisarAluno;
         private DataGridView dataGridView1;
+        private Button btnRemoverAluno;
     }
 }
