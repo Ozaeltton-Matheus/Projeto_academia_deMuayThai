@@ -48,6 +48,8 @@ namespace Projeto_academia_deMuayThai
                     sw.WriteLine(aluno.JsonSerializar(aluno));
                 }
                 MessageBox.Show("Arquivo salvo com sucesso!");
+                textBoxNomeAluno.Clear();
+                textBoxNomeTreino.Clear();
             }
             catch (Exception ex)
             {
@@ -62,9 +64,9 @@ namespace Projeto_academia_deMuayThai
             {
                 var strJson = "";
                 using (StreamReader sr = new StreamReader(@"C:\Users\Windows Falido\Documents\dados_da_academia_de_muaythai\arquivo.json"))
-                    {
+                {
                     strJson = sr.ReadToEnd();
-                    }
+                }
                 // Aqui o método está desserializando a string que ele leu.
                 var aluno = Aluno.JsonDesserializar(strJson);
 
@@ -79,6 +81,11 @@ namespace Projeto_academia_deMuayThai
             {
 
             }
+        }
+
+        private void textBoxNomeAluno_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

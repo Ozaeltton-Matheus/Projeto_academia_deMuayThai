@@ -73,6 +73,7 @@
             textBoxNomeAluno.Name = "textBoxNomeAluno";
             textBoxNomeAluno.Size = new Size(170, 34);
             textBoxNomeAluno.TabIndex = 2;
+            textBoxNomeAluno.TextChanged += textBoxNomeAluno_TextChanged;
             // 
             // textBoxNomeTreino
             // 
