@@ -35,6 +35,8 @@
             textBoxNomeTreino = new TextBox();
             btnCadastrarTreino = new Button();
             btnRemoverTreino = new Button();
+            dataGridViewTesteNoForm2 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTesteNoForm2).BeginInit();
             SuspendLayout();
             // 
             // labelNome
@@ -112,13 +114,25 @@
             btnRemoverTreino.UseVisualStyleBackColor = false;
             btnRemoverTreino.Click += btnRemoverTreino_Click;
             // 
+            // dataGridViewTesteNoForm2
+            // 
+            dataGridViewTesteNoForm2.BackgroundColor = Color.Black;
+            dataGridViewTesteNoForm2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTesteNoForm2.GridColor = Color.White;
+            dataGridViewTesteNoForm2.Location = new Point(328, 280);
+            dataGridViewTesteNoForm2.Name = "dataGridViewTesteNoForm2";
+            dataGridViewTesteNoForm2.RowHeadersWidth = 51;
+            dataGridViewTesteNoForm2.Size = new Size(300, 158);
+            dataGridViewTesteNoForm2.TabIndex = 6;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Blue;
             BackgroundImage = Properties.Resources.Fundo_Form2;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(933, 450);
+            Controls.Add(dataGridViewTesteNoForm2);
             Controls.Add(btnRemoverTreino);
             Controls.Add(btnCadastrarTreino);
             Controls.Add(textBoxNomeTreino);
@@ -128,6 +142,8 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form2";
             Text = "Gerir Treinos";
+            Load += Form2_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTesteNoForm2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,5 +156,6 @@
         private TextBox textBoxNomeTreino;
         private Button btnCadastrarTreino;
         private Button btnRemoverTreino;
+        private DataGridView dataGridViewTesteNoForm2;
     }
 }

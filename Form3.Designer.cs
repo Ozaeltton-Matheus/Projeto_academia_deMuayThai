@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             btnPesquisarAluno = new Button();
             textBoxPesquisarAluno = new TextBox();
-            dataGridView1 = new DataGridView();
+            dataGridViewForm3 = new DataGridView();
             btnRemoverAluno = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewForm3).BeginInit();
             SuspendLayout();
             // 
             // btnPesquisarAluno
@@ -59,16 +59,17 @@
             textBoxPesquisarAluno.Size = new Size(503, 34);
             textBoxPesquisarAluno.TabIndex = 2;
             // 
-            // dataGridView1
+            // dataGridViewForm3
             // 
-            dataGridView1.BackgroundColor = Color.Black;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.GridColor = Color.White;
-            dataGridView1.Location = new Point(14, 82);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(763, 356);
-            dataGridView1.TabIndex = 3;
+            dataGridViewForm3.BackgroundColor = Color.Black;
+            dataGridViewForm3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewForm3.GridColor = Color.White;
+            dataGridViewForm3.Location = new Point(14, 82);
+            dataGridViewForm3.Name = "dataGridViewForm3";
+            dataGridViewForm3.RowHeadersWidth = 51;
+            dataGridViewForm3.Size = new Size(763, 356);
+            dataGridViewForm3.TabIndex = 3;
+            dataGridViewForm3.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btnRemoverAluno
             // 
@@ -88,15 +89,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             BackgroundImage = Properties.Resources.Fundo_Form3;
-            ClientSize = new Size(789, 450);
+            ClientSize = new Size(926, 450);
             Controls.Add(btnRemoverAluno);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewForm3);
             Controls.Add(textBoxPesquisarAluno);
             Controls.Add(btnPesquisarAluno);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
             Text = "Exibir treinos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Form3_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewForm3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -104,7 +106,7 @@
         #endregion
         private Button btnPesquisarAluno;
         private TextBox textBoxPesquisarAluno;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewForm3;
         private Button btnRemoverAluno;
     }
 }

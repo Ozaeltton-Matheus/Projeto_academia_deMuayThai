@@ -84,7 +84,7 @@
             verTreinosToolStripMenuItem.BackColor = Color.Blue;
             verTreinosToolStripMenuItem.ForeColor = Color.White;
             verTreinosToolStripMenuItem.Name = "verTreinosToolStripMenuItem";
-            verTreinosToolStripMenuItem.Size = new Size(224, 26);
+            verTreinosToolStripMenuItem.Size = new Size(164, 26);
             verTreinosToolStripMenuItem.Text = "&Ver Treinos";
             verTreinosToolStripMenuItem.Click += verTreinosToolStripMenuItem_Click;
             // 
@@ -106,6 +106,7 @@
             ClientSize = new Size(927, 549);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
             Name = "nome_do_app";
             Text = "NAK MUAY THAY SPORTS";
             menuStrip1.ResumeLayout(false);

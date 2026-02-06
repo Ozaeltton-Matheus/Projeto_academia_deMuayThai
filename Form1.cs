@@ -44,15 +44,19 @@ namespace Projeto_academia_deMuayThai
         private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
-            form2.ShowDialog();
+            form2.MdiParent = this; // Define o formulário principal como pai do formulário secundário
+            // form2.ShowDialog();
             // O Show mostra o outro formulário e permite que você também interaja com o formulário principal
             // já o ShowDialog abre o outro formulário e bloqueia a interação com o formulário principal até que o outro formulário seja dechado.
+            form2.Show(); // Aparentemente se usar o ShowDialog dentro de um MDI Parent dá erro e só funciona com o Show.
         }
 
         private void verTreinosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
-            form3.ShowDialog();
+            form3.MdiParent = this; // Define o formulário principal como pai do formulário secundário
+            //form3.ShowDialog();
+            form3.Show();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

@@ -21,5 +21,15 @@ namespace Projeto_academia_deMuayThai
         {
 
         }
+
+        public void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

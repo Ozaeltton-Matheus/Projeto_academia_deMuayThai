@@ -13,6 +13,10 @@ namespace Projeto_academia_deMuayThai
 {
     public partial class Form2 : Form
     {
+        List<Aluno> listaDeAlunos = new List<Aluno>();
+
+        public object DataGridView1 { get; private set; }
+
         public Form2()
         {
             InitializeComponent();
@@ -28,7 +32,7 @@ namespace Projeto_academia_deMuayThai
 
         }
 
-        private void btnCadastrarTreino_Click(object sender, EventArgs e)
+        public void btnCadastrarTreino_Click(object sender, EventArgs e)
         {
             var aluno = new Aluno();
             aluno.Nome = textBoxNomeAluno.Text;
@@ -40,6 +44,16 @@ namespace Projeto_academia_deMuayThai
             // MessageBox.Show(aluno.JsonSerializar(aluno));
 
             // Serializando no arquivo.json lá na pasta documentos
+
+            // Adicionando o objeto na lista que foi criada lá encima.
+            listaDeAlunos.Add(aluno);
+
+            dataGridViewTesteNoForm2.DataSource = null;
+            dataGridViewTesteNoForm2.DataSource = listaDeAlunos;
+
+
+
+
 
             try
             {
@@ -87,6 +101,16 @@ namespace Projeto_academia_deMuayThai
         private void textBoxNomeAluno_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private class dataGridViewForm3
+        {
+            public static List<Aluno>? DataSource { get; internal set; }
         }
     }
 }
